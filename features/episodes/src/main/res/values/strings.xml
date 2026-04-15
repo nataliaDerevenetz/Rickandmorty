@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="error_timeout">Сервер долго не отвечает</string>
+    <string name="error_no_internet">Нет интернета</string>
+    <string name="error_unknown">Произошла ошибка: %1$s</string>
+    <string name="error_retry">Повторить</string>
+    <string name="error_load">Ошибка загрузки</string>
+    <string name="not_found">Результаты не найдены</string>
+    <string name="characters">Персонажи</string>
+    <string name="location">Локация</string>
+    <string name="gender">Пол</string>
+</resources>

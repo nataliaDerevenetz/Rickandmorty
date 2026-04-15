@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/episodes_navigation"
+    app:startDestination="@id/nav_episodes">
+
+    <fragment
+        android:id="@+id/nav_episodes"
+        android:name="com.example.episodes.Episodes.EpisodesFragment"
+        android:label="Episodes">
+        <action
+            android:id="@+id/action_episodes_to_episodeDetail"
+            app:destination="@id/nav_episode_detail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_episode_detail"
+        android:name="com.example.episodes.EpisodeDetails.EpisodeDetailFragment"
+        android:label="Episode Detail">
+        <argument
+            android:name="episodeId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_episodeDetail_to_character"
+            app:destination="@id/nav_character" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_character"
+        android:name="com.example.episodes.Character.CharacterFragment"
+        android:label="Character">
+        <argument
+            android:name="characterId"
+            app:argType="integer" />
+        <deepLink app:uri="app://rickandmorty/character/{characterId}" />
+    </fragment>
+</navigation>
