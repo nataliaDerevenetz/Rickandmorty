@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.android.library)
+    alias(libs.plugins.explorer.android.room)
     alias(libs.plugins.ksp)
     alias(libs.plugins.hilt)
 }
@@ -35,10 +36,6 @@ android {
 }
 
 dependencies {
-    implementation(libs.androidx.room.paging)
-    implementation(libs.androidx.room.runtime)
-    ksp(libs.androidx.room.compiler)
-    implementation(libs.androidx.room.ktx)
 
     implementation(libs.hilt.android)
     ksp(libs.hilt.android.compiler)
@@ -50,5 +47,5 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-    implementation(project(":core:models"))
+    api(project(":core:models"))
 }

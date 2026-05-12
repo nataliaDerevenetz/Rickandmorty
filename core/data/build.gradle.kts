@@ -40,14 +40,6 @@ dependencies {
 
     implementation(libs.androidx.paging.runtime)
 
-    implementation(libs.retrofit)
-    implementation(libs.converter.gson)
-
-    implementation(libs.androidx.room.paging)
-    implementation(libs.androidx.room.runtime)
-    ksp(libs.androidx.room.compiler)
-    implementation(libs.androidx.room.ktx)
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -58,7 +50,5 @@ dependencies {
     api(project(":core:database"))
     api(project(":core:network"))
     implementation(project(":core:domain"))
-    implementation(project(":core:models"))
-    implementation(project(":core:utils"))
 
 }

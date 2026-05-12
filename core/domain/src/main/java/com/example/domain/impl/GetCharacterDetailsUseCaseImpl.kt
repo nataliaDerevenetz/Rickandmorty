@@ -12,9 +12,9 @@ class GetCharacterDetailsUseCaseImpl @Inject constructor(
 ): GetCharacterDetailsUseCase {
     override fun invoke(characterId: Int): Flow<Character> = flow {
         //local
-        val episodeDetails = explorerRepository.getCharacterFromLocal(characterId)
-        if (episodeDetails != null) {
-            emit(episodeDetails)
+        val localCharacter = explorerRepository.getCharacterFromLocal(characterId)
+        if (localCharacter != null) {
+            emit(localCharacter)
         }
 
         //remote

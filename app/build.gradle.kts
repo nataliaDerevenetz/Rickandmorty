@@ -1,3 +1,4 @@
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.ksp)
@@ -14,6 +15,8 @@ android {
 
     buildFeatures {
         viewBinding = true
+        //!!!!!!
+        buildConfig = true
     }
 
     defaultConfig {
@@ -67,7 +70,6 @@ dependencies {
     implementation(project(":features:episodes"))
     implementation(project(":features:search"))
     implementation(project(":core:navigation"))
-    api(project(":core:network"))
 
     implementation(project(":core:data"))
 }

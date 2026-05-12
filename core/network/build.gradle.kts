@@ -37,8 +37,8 @@ android {
 dependencies {
     implementation(libs.okhttp)
     implementation(libs.logging.interceptor)
-    implementation(libs.retrofit)
-    implementation(libs.converter.gson)
+    api(libs.retrofit)
+    api(libs.converter.gson)
 
     implementation(libs.hilt.android)
     ksp(libs.hilt.android.compiler)
@@ -55,6 +55,6 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-    implementation(project(":core:models"))
-    implementation(project(":core:utils"))
+    api(project(":core:models"))
+    api(project(":core:utils"))
 }
